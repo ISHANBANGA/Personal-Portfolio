@@ -1,0 +1,12 @@
+body {
+    background-color: #f4f4f9;
+  }
+  
+  .container h1 {
+    color: #333;
+  }
+  
+  .btn {
+    font-weight: bold; /* Makes text inside buttons bold */
+  }
+  
