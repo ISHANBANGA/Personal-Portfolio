@@ -5,13 +5,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects - Ishan Banga</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/Style.css">
   <script src="js/script.js"></script>
   <style>
-    .container {margin-top: 100px;}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    #eye {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('Images/finn.png') no-repeat center;
+    background-size: contain;
+    transition: transform 0.1s linear;  /* Smooth transition for movement */
+  }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .section-title {
+      text-align: left;
+      margin: 30px 0 20px 30px;
+      font-size: 1.8em;
+      color: #333;
+    }
+
+    .projects-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 15px;
+      width: 300px;
+      padding: 20px;
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1em;
+      color: #666;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #007BFF;
+    }
+
+    .card-divider {
+      border-right: 1px solid #ccc;
+      margin-right: 20px;
+      padding-right: 20px;
+    }
+
+    .projects-container .card:not(:last-child) {
+      border-right: 2px solid #ccc;
+    }
+    
+    @media (max-width: 768px) {
+      .projects-container {
+        flex-direction: column;
+      }
+
+      .card {
+        border-right: none;
+        margin: 10px auto;
+      }
+    }
 </style>
 </head>
-<body>
-  <!-- Navbar here -->
+<body >
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #f8f9fa;">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Ishan Banga</a>
@@ -22,42 +106,110 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" id="homeLink" href="index.html">Home</a>
-          </li>
+        </li>
           <li class="nav-item">
             <a class="nav-link" id="aboutLink" href="About.html">About</a>
-          </li>
+        </li>
           <li class="nav-item">
             <a class="nav-link" id="blogLink" href="Blog.html">Blog</a>
-          </li>
+        </li>
           <li class="nav-item">
             <a class="nav-link" id="projectsLink" href="Projects.html">Projects</a>
-          </li>
+        </li>
           <li class="nav-item">
-            <a class="nav-link" id="contactLink" href="Contact.html">Contact</a>
-          </li>
+            <a class="nav-link" id="contactLink" href="Contact.html">Contact Me!</a>
+        </li>
         </ul>
       </div>
     </div>
   </nav>
+  <!-- <div id="eye" style="position: absolute; width: 50px; height: 50px; background: url('Images/finn.png') no-repeat center; background-size: contain;"></div> -->
+<hr>
+<hr>
+<div class="container mt-5 pt-4">
+  <h1>My Projects</h1>
+  <!-- Tabs Navigation -->
+  <ul class="nav nav-tabs" id="projectsTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="past-projects-tab" data-bs-toggle="tab" data-bs-target="#past-projects" type="button" role="tab" aria-controls="past-projects" aria-selected="true">Past Projects</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="ongoing-projects-tab" data-bs-toggle="tab" data-bs-target="#ongoing-projects" type="button" role="tab" aria-controls="ongoing-projects" aria-selected="false">Ongoing Projects</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="upcoming-projects-tab" data-bs-toggle="tab" data-bs-target="#upcoming-projects" type="button" role="tab" aria-controls="upcoming-projects" aria-selected="false">Upcoming Projects</button>
+    </li>
+  </ul>
 
-  <div class="container mt-5">
-    <h1>My Projects</h1>
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Design Studio Booking Management Application</h5>
-        <p class="card-text">A full-stack application built with ASP.NET Core, React.js, and MongoDB, focusing on cloud solutions and API development.</p>
-        <a href="#" class="btn btn-primary">Learn More</a>
+  <!-- Tab Content -->
+  <div class="tab-content" id="projectsTabContent">
+    <!-- Past Projects Tab -->
+    <div class="tab-pane fade show active" id="past-projects" role="tabpanel" aria-labelledby="past-projects-tab">
+      <div class="projects-container">
+        <div class="card">
+            <h3>Teacher Assistant's Course Assignment Data Sort</h3>
+            <p>Developed an automated tool using C# to assist the Faculty of Engineering and Applied Science in efficiently handling TA assignment data.</p>
+            <p>Designed to read, merge, and summarize data from multiple Excel sheets, providing an organized overview of TA-to-course allocations.</p>
+            <p>Successfully optimized administrative workflows by reducing manual data handling and improving the accuracy of TA assignment records.</p>
+            <a href="https://github.com/ISHANBANGA/TA-Course-Assignment-Sorter">View Project</a>
+        </div>
+        <div class="card">
+            <h3>TubeFlix - an Online Streaming Platform</h3>
+            <p>
+              TubeFlix is a web-based streaming platform designed to offer a personalized user experience for movie and TV show enthusiasts. It features secure user authentication, a dynamic content catalog, personalized watchlists, and responsive design optimized for various devices. The backend is powered by ASP.NET MVC, with Microsoft SQL Server handling data management, and the frontend utilizes .aspx pages enhanced with JavaScript and CSS for a modern interface.
+          </p>
+          <p>
+            Key challenges included scalability, optimizing database management for performance, and ensuring consistent functionality across platforms. This project enhanced my skills in ASP.NET MVC, SQL, and full-scale web application development.
+        </p>
+            <a href="https://github.com/ISHANBANGA/Tubeflix">View Project</a>
+        </div>
+        <div class="card">
+            <h3>Simple Calculator - A Web-Based Utility Tool</h3>
+            <p>
+              A lightweight, web-based calculator designed for basic arithmetic operations. Built with HTML, CSS, and JavaScript, it features a user-friendly interface, responsive design, and efficient error handling.
+          </p>
+          <p>
+            This project enhanced my front-end development skills, including cross-device compatibility and UI design, providing a practical tool for everyday calculations.
+        </p>
+            <a href="https://github.com/ISHANBANGA/Calculator">View Project</a>
+        </div>
       </div>
     </div>
-    <div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Tutoring Services Website</h5>
-        <p class="card-text">A full-stack application built with ASP.NET Core, React.js, and MongoDB, focusing on cloud solutions and API development.</p>
-        <a href="#" class="btn btn-primary">Learn More</a>
+
+    <!-- Ongoing Projects Tab -->
+    <div class="tab-pane fade" id="ongoing-projects" role="tabpanel" aria-labelledby="ongoing-projects-tab">
+      <div class="projects-container">
+        <div class="card">
+          <h3>Design Studio Booking Management Application</h3>
+          <p>Developing a full-stack management system using ASP.NET Core, React.js, and MongoDB to streamline lab bookings and improve user experience for both employees and students. Focus on cloud integration, database scalability, and delivering a seamless user interface.</p>
+          <p><em>Details are not available publicly due to privacy constraints.</em></p>
+        </div>
+        <div class="card">
+          <h3>Tutoring Services Website</h3>
+          <p>Developing a web application using React, .NET Core, and MongoDB to manage a tutoring service. Designed to facilitate student registration, access to practice exercises, and booking of private or online sessions based on tutor availability.</p>
+          <p><em>Details are not available publicly due to privacy constraints.</em></p>
+        </div>
       </div>
+    </div>
+
+    <!-- Upcoming Projects Tab -->
+    <div class="tab-pane fade" id="upcoming-projects" role="tabpanel" aria-labelledby="upcoming-projects-tab">
+      <div class="projects-container">
+        <div class="card">
+          <h3>TA Workbook Project</h3>
+      <p>Expanding on the previous TA Merge Sort tool, this project aims to create a comprehensive application for non-technical users to efficiently manage and sort TA details and course assignments. The TA Workbook Project is designed to provide a permanent and user-friendly solution, improving upon the temporary spreadsheet-based system used previously.</p>
+      <p><em>Details are not available publicly due to privacy constraints.</em></p>
+    </div>
       </div>
-    <!-- Add more project cards as needed -->
+    </div>
   </div>
+</div>
+
+<footer>
+  <div class="container">
+    <p>&copy; 2024 Ishan Banga. All rights reserved.</p>
+  </div>
+</footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

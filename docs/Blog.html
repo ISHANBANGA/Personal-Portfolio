@@ -10,7 +10,53 @@
   <link href="css/Style.css" rel="stylesheet">
   <script src="js/script.js"></script>
   <style>
-    .container {margin-top: 100px;}
+    body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        #eye {
+             position: absolute;
+             width: 50px;
+              height: 50px;
+              background: url('Images/blackwidow.jpg') no-repeat center;
+              background-size: contain;
+              transition: transform 0.1s linear;  /* Smooth transition for movement */
+        }
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .blog-container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .blog-post {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-post h3 {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+
+        .blog-post p {
+            color: #666;
+        }
+
+        .blog-post code {
+            background-color: #f1f1f1;
+            padding: 5px;
+            border-radius: 4px;
+        }
 </style>
 </head>
 
@@ -26,48 +72,66 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" id="homeLink" href="index.html">Home</a>
-          </li>
+        </li>
           <li class="nav-item">
             <a class="nav-link" id="aboutLink" href="About.html">About</a>
-          </li>
+        </li>
           <li class="nav-item">
             <a class="nav-link" id="blogLink" href="Blog.html">Blog</a>
-          </li>
+        </li>
           <li class="nav-item">
             <a class="nav-link" id="projectsLink" href="Projects.html">Projects</a>
-          </li>
+        </li>
           <li class="nav-item">
-            <a class="nav-link" id="contactLink" href="Contact.html">Contact</a>
-          </li>
+            <a class="nav-link" id="contactLink" href="Contact.html">Contact Me!</a>
+        </li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- Hero Section -->
-  <div class="container mt-5 text-center">
-    <img src="Images/profile picture of Ishan.jpg" class="rounded-circle mb-3" alt="Ishan Banga" width="300" height="300">
-    <h1>Welcome to My Portfolio</h1>
-    <p>I'm Ishan Banga, a passionate Software Engineering student at Ontario Tech University.</p>
+  <!-- <div id="eye" style="position: absolute; width: 50px; height: 50px; background: url('Images/blackwidow.jpg') no-repeat center; background-size: contain;"></div> -->
+  <hr>
+  <hr>
+  <h1>My Blog</h1>
+
+  <div class="blog-container">
+      <!-- Blog Post 1 -->
+      <div class="blog-post">
+          <h3>Connecting MongoDB to a React Application</h3>
+          <p>
+              I encountered a few difficulties while connecting MongoDB to my React app, <br> <em>but here's what worked:</em>
+              <br>
+              First, ensure you have MongoDB running, and you can connect to it using <code>mongoose</code>. Next, install the required packages using <code>npm install mongoose</code>.
+          </p>
+          <p>
+              Follow this link for more info <a href="https://www.mongodb.com/community/forums/t/use-mongodb-directly-from-react/238644"> Get Started with Connecting MongoDB!</a>
+          </p>
+      </div>
+
+      <div class="blog-post">
+        <h3>Implementing EmailJs in your Website</h3>
+        <p>
+          I faced multiple connectivity issues and also compile errors while integrating a third-party API <em><strong>EmailJS</strong></em> in my personal portfolio for handling emails. But here's what worked: <br> <em>but here's what worked:</em>
+            <br>
+            First, ensure you secure API usage by correctly <ul><li>Setting up service ID</li><li>Template ID</li><li>Public ID (previously called user ID)</li></ul> which stabilized the email functionality. <br><br> <p> This link might help you more <a href="https://www.emailjs.com/docs/">Get Started with EmailJS!</a> </p>
+        </p>
+    </div>
+
+    <div class="blog-post">
+      <h3>More Coming Soon..</h3>
+      <!-- <p>
+      </p> -->
   </div>
 
-  <div class="container mt-5">
-    <h1>How to Connect to MongoDB Database from your React Application with ASP.NET Core</h1>
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Design Studio Booking Management Application</h5>
-        <p class="card-text">A full-stack application built with ASP.NET Core, React.js, and MongoDB, focusing on cloud solutions and API development.</p>
-        <a href="#" class="btn btn-primary">Learn More</a>
-      </div>
-    </div>
-    <div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Tutoring Services Website</h5>
-        <p class="card-text">A full-stack application built with ASP.NET Core, React.js, and MongoDB, focusing on cloud solutions and API development.</p>
-        <a href="#" class="btn btn-primary">Learn More</a>
-      </div>
-      </div>
-    <!-- Add more project cards as needed -->
+      <!-- Add more blog posts here -->
   </div>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Ishan Banga. All rights reserved.</p>
+    </div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

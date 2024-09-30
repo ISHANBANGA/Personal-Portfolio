@@ -9,4 +9,12 @@ body {
   .btn {
     font-weight: bold; /* Makes text inside buttons bold */
   }
-  
+  .profile-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: #007bff; /* Bootstrap primary color, or choose your own */
+}

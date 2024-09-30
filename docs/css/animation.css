@@ -1,0 +1,50 @@
+#animationLayer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: transparent;
+    z-index: 9999;
+  }
+  
+  .thunderstorm {
+    background: rgba(0, 0, 0, 0.5);
+    animation: thunder 1s infinite;
+  }
+  
+  .fire {
+    background: rgba(255, 69, 0, 0.5);
+    animation: fireFlicker 1.5s infinite;
+  }
+  
+  .earthquake {
+    animation: shake 0.5s infinite;
+  }
+  
+  .fight {
+    background-image: url('fight-animation.gif');
+    background-size: cover;
+  }
+  
+  .spill {
+    background-image: url('spill-animation.gif');
+    background-size: cover;
+  }
+  
+  @keyframes thunder {
+    50% { background: rgba(255, 255, 255, 0.8); }
+  }
+  
+  @keyframes fireFlicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+  }
+  

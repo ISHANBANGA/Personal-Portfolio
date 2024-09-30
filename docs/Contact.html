@@ -5,12 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact - Ishan Banga</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .container {margin-top: 100px;}
-    </style>
-    
+  <link rel="stylesheet" href="css/Style.css">
+    <script src="js/script.js"></script>
 </head>
+<style>
+  #eye {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('Images/hulk.png') no-repeat center;
+    background-size: contain;
+    transition: transform 0.1s linear;  /* Smooth transition for movement */
+  }
+</style>
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #f8f9fa;">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Ishan Banga</a>
@@ -21,23 +30,26 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" id="homeLink" href="index.html">Home</a>
-          </li>
+        </li>
           <li class="nav-item">
             <a class="nav-link" id="aboutLink" href="About.html">About</a>
-          </li>
+        </li>
           <li class="nav-item">
             <a class="nav-link" id="blogLink" href="Blog.html">Blog</a>
-          </li>
+        </li>
           <li class="nav-item">
             <a class="nav-link" id="projectsLink" href="Projects.html">Projects</a>
-          </li>
+        </li>
           <li class="nav-item">
-            <a class="nav-link" id="contactLink" href="Contact.html">Contact</a>
-          </li>
+            <a class="nav-link" id="contactLink" href="Contact.html">Contact Me!</a>
+        </li>
         </ul>
       </div>
     </div>
   </nav>
+  <!-- <div id="eye" style="position: absolute; width: 50px; height: 50px; background: url('Images/hulk.png') no-repeat center; background-size: contain;"></div> -->
+<hr>
+<hr>
 
   <div class="container mt-5">
     <h1>Contact Me</h1>
@@ -64,6 +76,12 @@
     <div id="responseMessage" class="mt-3"></div>
   </div>
 
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Ishan Banga. All rights reserved.</p>
+    </div>
+  </footer>
+
   <!-- EmailJS SDK -->
   <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script type="text/javascript">
@@ -87,6 +105,6 @@
                 });
     });
   </script>
-    <script src="script.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
