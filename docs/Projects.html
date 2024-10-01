@@ -9,39 +9,44 @@
   <script src="js/script.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    #eye {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: url('Images/finn.png') no-repeat center;
-    background-size: contain;
-    transition: transform 0.1s linear;  /* Smooth transition for movement */
-  }
-
-    h1 {
-      text-align: center;
-      padding: 20px;
-    }
-
-    .section-title {
-      text-align: left;
-      margin: 30px 0 20px 30px;
-      font-size: 1.8em;
-      color: #333;
-    }
-
+    background-color: #11419b; /* Assuming this is the background color you mentioned */
+    color: #ffffff; /* Ensures text is white for readability */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    -webkit-text-fill-color: #fff; /* White text */
+    text-align: center;
+    padding: 20px;
+    /*background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter background or transparent white */
+   /* text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* Adding shadow to text for better readability */
+     /*border-bottom: 2px solid #eee; /* Optional stylistic choice */
+}
     .projects-container {
       display: flex;
       justify-content: space-around;
       flex-wrap: wrap;
       padding: 20px;
     }
+    .project-tabs .nav-tabs {
+    border-bottom: 2px solid #dee2e6; /* Defines a distinct border for the tabs */
+}
 
+.project-tabs .nav-link {
+    border: 1px solid transparent; /* Hides default borders */
+    border-radius: 5px 5px 0 0; /* Rounded corners for the top of tabs */
+    background-color: #e0e9f2; /* Light grey background for inactive tabs */
+    color: #495057; /* Dark grey text */
+    padding: 10px; /* More padding for a larger click area */
+    margin-right: 10px;
+}
+
+.project-tabs .nav-link.active {
+    background-color: #fff; /* White background for active tab */
+    border-color: #dee2e6 #dee2e6 #fff; /* Borders blend in with the tab content */
+    color: #0056b3; /* Highlight color for the active tab */
+}
     .card {
       background-color: #fff;
       border-radius: 8px;
@@ -52,47 +57,47 @@
       transition: transform 0.3s ease;
       position: relative;
     }
-
     .card:hover {
       transform: scale(1.05);
     }
-
     .card h3 {
       font-size: 1.4em;
       margin-bottom: 10px;
     }
-
     .card p {
       font-size: 1em;
       color: #666;
     }
-
     .card a {
       text-decoration: none;
       color: #007BFF;
     }
-
-    .card-divider {
-      border-right: 1px solid #ccc;
-      margin-right: 20px;
-      padding-right: 20px;
+    .technologies-used {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
     }
-
-    .projects-container .card:not(:last-child) {
-      border-right: 2px solid #ccc;
+    .technologies-used img {
+      width: 30px;
+      height: 30px;
+      margin-right: 5px;
     }
-    
     @media (max-width: 768px) {
       .projects-container {
         flex-direction: column;
       }
-
       .card {
-        border-right: none;
         margin: 10px auto;
+        width: 90%;
       }
     }
-</style>
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 40px;
+      background-color: #f8f9fa; /* Consistent with other elements */
+    }
+  </style>
 </head>
 <body >
   <!-- Navbar -->
@@ -129,7 +134,7 @@
 <div class="container mt-5 pt-4">
   <h1>My Projects</h1>
   <!-- Tabs Navigation -->
-  <ul class="nav nav-tabs" id="projectsTab" role="tablist">
+  <ul class="nav nav-tabs project-tabs" id="projectsTab" role="tablist">
     <li class="nav-item" role="presentation">
       <button class="nav-link active" id="past-projects-tab" data-bs-toggle="tab" data-bs-target="#past-projects" type="button" role="tab" aria-controls="past-projects" aria-selected="true">Past Projects</button>
     </li>
@@ -147,31 +152,78 @@
     <div class="tab-pane fade show active" id="past-projects" role="tabpanel" aria-labelledby="past-projects-tab">
       <div class="projects-container">
         <div class="card">
-            <h3>Teacher Assistant's Course Assignment Data Sort</h3>
+          <img src ="Images/course assignment sheet.png" alt="data1" class="project-img" style ="width:100%; height:auto;"/>
+          
+          <img src ="Images/ta assignment sheet.png" alt="data1" class="project-img" style ="width:100%; height:auto;"/>
+        <br>
+            <h3><b>Teacher Assistant's Course Assignment Data Automation</b></h3>
+            <p>This tool reduced the time of work by 8 man hours to 2 sec task.</p>
+            <p>I proposed a method which can read data row by row against multiple excel sheets of desired columns.</p>
             <p>Developed an automated tool using C# to assist the Faculty of Engineering and Applied Science in efficiently handling TA assignment data.</p>
-            <p>Designed to read, merge, and summarize data from multiple Excel sheets, providing an organized overview of TA-to-course allocations.</p>
+            <!-- <p></p> -->
             <p>Successfully optimized administrative workflows by reducing manual data handling and improving the accuracy of TA assignment records.</p>
+            <h6>Technologies-Used</h6>
+            <div class="technologies-used">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" title="C#" style="width:30px; height:30px;">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET Core" title=".NET Core" style="width:30px; height:30px;">
+            </div>
             <a href="https://github.com/ISHANBANGA/TA-Course-Assignment-Sorter">View Project</a>
         </div>
         <div class="card">
-            <h3>TubeFlix - an Online Streaming Platform</h3>
+          <img src ="Images/Tubeflix1.jpg.jpg" alt="data1" class="project-img" style ="width:100%; height:auto;"/>
+          
+          <img src ="Images/Tubeflix2.jpg.jpg" alt="data1" class="project-img" style ="width:100%; height:auto;"/>
+          <br>
+            <h3><b>TubeFlix - an Online Streaming Platform</b></h3>
             <p>
               TubeFlix is a web-based streaming platform designed to offer a personalized user experience for movie and TV show enthusiasts. It features secure user authentication, a dynamic content catalog, personalized watchlists, and responsive design optimized for various devices. The backend is powered by ASP.NET MVC, with Microsoft SQL Server handling data management, and the frontend utilizes .aspx pages enhanced with JavaScript and CSS for a modern interface.
           </p>
           <p>
             Key challenges included scalability, optimizing database management for performance, and ensuring consistent functionality across platforms. This project enhanced my skills in ASP.NET MVC, SQL, and full-scale web application development.
         </p>
+        <h6>Technologies-Used</h6>
+        <div class="technologies-used">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aspnet/aspnet-original.svg" alt="ASP.NET" title="ASP.NET" style="width:30px; height:30px;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" title="C#" style="width:30px; height:30px;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg" alt="Microsoft SQL Server" title="Microsoft SQL Server" style="width:30px; height:30px;">
+        </div>
             <a href="https://github.com/ISHANBANGA/Tubeflix">View Project</a>
         </div>
         <div class="card">
-            <h3>Simple Calculator - A Web-Based Utility Tool</h3>
+          <img src ="Images/Calculator.png" alt="data1" class="project-img" style ="width:100%; height:200px;"/>
+          <br>
+            <h3><b>Simple Calculator - A Web-Based Utility Tool</b></h3>
             <p>
               A lightweight, web-based calculator designed for basic arithmetic operations. Built with HTML, CSS, and JavaScript, it features a user-friendly interface, responsive design, and efficient error handling.
           </p>
           <p>
             This project enhanced my front-end development skills, including cross-device compatibility and UI design, providing a practical tool for everyday calculations.
         </p>
+        <h6>Technologies-Used</h6>
+        <div class="technologies-used">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5" style="width:30px; height:30px;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3" style="width:30px; height:30px;">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" style="width:30px; height:30px;">
+        </div>
             <a href="https://github.com/ISHANBANGA/Calculator">View Project</a>
+        </div>
+        <div class="card">
+          <img src ="Images/CricketKnockdown.png" alt="data1" class="project-img" style ="width:100%; height:auto;"/>
+          
+          <!-- <img src ="Images/Tubeflix2.jpg.jpg" alt="data1" class="project-img" style ="width:100%; height:auto;"/> -->
+          <br>
+            <h3><b>Desktop Application: Cricket Knockdown Tournament</b></h3>
+            <p>
+              The Cricket Knockdown Tournament application is a desktop software developed using C# Windows Forms. It simulates a cricket tournament where teams are randomly distributed to compete against each other. The initial matchups lead to semi-final rounds based on the scores achieved in the preliminary matches. The winning teams advance to the final round where they compete for the championship. This application incorporates random team distribution, score tracking, and progression logic to mimic the dynamics of a real cricket tournament. The intuitive interface allows users to easily interact with the software, manage games, and view results in real time, culminating in a climactic final match where the champion is crowned.
+            </p>
+          <p>
+            Key challenges included scalability, optimizing database management for performance, and ensuring consistent functionality across platforms. This project enhanced my skills in ASP.NET MVC, SQL, and full-scale web application development.
+        </p>
+        <h6>Technologies-Used</h6>
+        <div class="technologies-used">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" title="C#" style="width:30px; height:30px;">
+        </div>
+            <a href="https://github.com/ISHANBANGA/CricketknockdownGame">View Project</a>
         </div>
       </div>
     </div>
@@ -182,11 +234,23 @@
         <div class="card">
           <h3>Design Studio Booking Management Application</h3>
           <p>Developing a full-stack management system using ASP.NET Core, React.js, and MongoDB to streamline lab bookings and improve user experience for both employees and students. Focus on cloud integration, database scalability, and delivering a seamless user interface.</p>
+          <h6>Technologies-Used</h6>
+          <div class="technologies-used">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" style="width:30px; height:30px;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET Core" title=".NET Core" style="width:30px; height:30px;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="MongoDB" style="width:30px; height:30px;">
+          </div>
           <p><em>Details are not available publicly due to privacy constraints.</em></p>
         </div>
         <div class="card">
           <h3>Tutoring Services Website</h3>
           <p>Developing a web application using React, .NET Core, and MongoDB to manage a tutoring service. Designed to facilitate student registration, access to practice exercises, and booking of private or online sessions based on tutor availability.</p>
+          <h6>Technologies-Used</h6>
+          <div class="technologies-used">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React" style="width:30px; height:30px;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET Core" title=".NET Core" style="width:30px; height:30px;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" title="MongoDB" style="width:30px; height:30px;">
+          </div>
           <p><em>Details are not available publicly due to privacy constraints.</em></p>
         </div>
       </div>
@@ -198,14 +262,30 @@
         <div class="card">
           <h3>TA Workbook Project</h3>
       <p>Expanding on the previous TA Merge Sort tool, this project aims to create a comprehensive application for non-technical users to efficiently manage and sort TA details and course assignments. The TA Workbook Project is designed to provide a permanent and user-friendly solution, improving upon the temporary spreadsheet-based system used previously.</p>
+      <h6>Technologies-Used</h6>
+      <div class="technologies-used">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript" style="width:30px; height:30px;">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" style="width:30px; height:30px;">
+      </div>
       <p><em>Details are not available publicly due to privacy constraints.</em></p>
     </div>
+    <div class="card">
+      <h3>Conversation Analyzer</h3>
+  <p>This project concept is very interesting to me and also to its a bridge to catch up with the real world!, this project came in my mind while i was attending a networking event, in which i realized how important it was for me to take notes of what people have in their mind , their experience.</p>
+  <p>This project will use python libraries to convert the speech to text and use the other library to analysis the text and create word meaning for complex words and simplify the text andd also create bullet points for note taking and use the speaker-listener table data.</p>
+  <h6>Technologies-Used</h6>
+  <div class="technologies-used">
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" title="Python" style="width:30px; height:30px;">
+  </div>
+  <br>
+  <p><em>Details are not available publicly due to privacy constraints.</em></p>
+</div>
       </div>
     </div>
   </div>
 </div>
 
-<footer>
+<footer class="footer mt-auto py-3 bg-light">
   <div class="container">
     <p>&copy; 2024 Ishan Banga. All rights reserved.</p>
   </div>
